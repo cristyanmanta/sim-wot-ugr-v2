@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<!--
+	SIM.WoT Event-Driven Simulator for the Web of Things
+	-- Settings UI Options
+-->
+<html xmlns:justify-content="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SIM.WoT - Event-Driven WoT Simulation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Web of Things Event-Driven Simulation" />
+    <meta name="keywords" content="Information Retrieval, Search Engine, Web of Things, Internet of Things" />
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <!-- Section for Search of Things -->
+                <section class="alt" id="search">
+                    <p>Event-Driven Simulator for the <br /> <\WoT> Web of Things</p>
+                    <!-- <form method="post" action="/results">
+                        <input type="text" name="query" id="query" placeholder="Search for Things?" />
+                    </form> -->
+                </section>
+                <ul class="icons">
+                    <li><a class="icon fa-github fa-2x" href="https://github.com/cristyanmanta/sim-wot-ugr"><span class="label">GitHub Project Repository</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Banner w/ id="banner" nor Content-->
+            <section>
+
+                <header class="major">
+                    <h2>Specific Settings</h2>
+                </header>
+
+                <div class="row gtr-200">
+                    <div class="col-6 col-12-medium">
+                        <!-- SIM.WoT Specific Settings Form -->
+                        <form action="/settings" method="post">
+
+                            <div class="box">
+                                <p>Specific Settings for vThings Behaviour:</p>
+                                <div class="col-6 col-12-small">
+                                    <small class="form-text text-muted"><i>Creation. Lambda = mean arrival rate per unit time:</i></small>
+                                    <select class=custom-select name=spatial_input>
+                                        <option selected value=0>1
+                                        <option value=1>10
+                                        <option value=2>100
+                                        <option value=3>1000
+                                    </select>
+                                    <small class="form-text text-muted"><i>Connectivity Model. Average % of connected time:</i></small>
+                                    <select class=custom-select name=temporal_input>
+                                        <option selected value=0>100% - Always Connected
+                                        <option value=1>90%
+                                        <option value=2>75%
+                                        <option value=3>50%
+                                        <option value=4>25%
+                                        <option value=5>10%
+                                        <option value=6>0%
+                                    </select>
+                                    <small class="form-text text-muted"><i>Mobility Model. Average % of moving time:</i></small>
+                                    <select class=custom-select name=temporal_input>
+                                        <option selected value=0>0% - No movement
+                                        <option value=1>10%
+                                        <option value=2>25%
+                                        <option value=3>50%
+                                        <option value=4>75%
+                                        <option value=5>90%
+                                        <option value=5>100%
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="vThings-bic" name="vThings-bic" checked="">
+                                    <label for="vThings-bic">Bicycles</label>
+
+                                    <input type="checkbox" id="vThings-bus" name="vThings-bus" checked="">
+                                    <label for="vThings-bus">Buses</label>
+
+                                    <input type="checkbox" id="vThings-car" name="vThings-car" checked="">
+                                    <label for="vThings-car">Cars</label>
+                                </div>
+
+                            </div>
+
+                            <a class="button primary" href="#">Save Settings</a></li>
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-6 col-12-medium">
+                        <!-- SIM.WoT Specific Settings Form -->
+                        <form action="/settings" method="post">
+
+                            <div class="box">
+                                <p>Specific Settings for vSensors Behaviour:</p>
+                                <div class="col-6 col-12-small">
+                                    <small class="form-text text-muted"><i>Creation. Lambda = mean arrival rate per unit time:</i></small>
+                                    <select class=custom-select name=spatial_input>
+                                        <option selected value=0>1
+                                        <option value=1>10
+                                        <option value=2>100
+                                        <option value=3>1000
+                                    </select>
+                                    <small class="form-text text-muted"><i>Measurement Model. Sample time:</i></small>
+                                    <select class=custom-select name=temporal_input>
+                                        <option selected value=0>10 seconds
+                                        <option value=1>30 seconds
+                                        <option value=2>1 minute
+                                        <option value=3>5 minutes
+                                        <option value=4>10 minutes
+                                        <option value=5>30 minutes
+                                        <option value=6>1 hour
+                                    </select>
+                                    <small class="form-text text-muted"><i>Failure Model. Probability Function:</i></small>
+                                    <select class=custom-select name=temporal_input>
+                                        <option selected value=0>Exponential
+                                        <option value=1>Weibull
+                                    </select>
+
+                                </div>
+                                <br>
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="vSensors-loc" name="vSensors-loc" checked="">
+                                    <label for="vSensors-loc">Location</label>
+
+                                    <input type="checkbox" id="vSensors-ava" name="vSensors-ava" checked="">
+                                    <label for="vSensors-ava">Availability</label>
+
+                                    <input type="checkbox" id="vSensors-tmp" name="vSensors-tmp" checked="">
+                                    <label for="vSensors-tmp">Temperature</label>
+                                </div>
+
+                            </div>
+
+                            <a class="button primary" href="#">Save Settings</a></li>
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form name="form-sidebar" method="post" action="/results">
+                    <input type="text" name="query_sidebar" id="query_sidebar" placeholder="Search for Things?" />
+                </form>
+            </section>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Navigation Bar</h2>
+                </header>
+                <ul>
+                    <li>
+                        <span class="opener">IR.WoT</span>
+                        <ul>
+                            <li><a href="https://ir-wot-ugr.appspot.com/">Search</a></li>
+                            <li><a href="https://ir-wot-ugr.appspot.com/dashboard">Instructions</a></li>
+                            <li><a href="/architecture">Architecture</a></li>
+                            <li><a href="https://ir-wot-ugr.appspot.com/settings">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">SiM.WoT</span>
+                        <ul>
+                            <li><a href="https://sim-wot-ugr.ue.r.appspot.com/">SIM.WoT Simulator</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/settings">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://ir-wot-ugr.ue.r.appspot.com/research">Research</a></li>
+                    <li><a href="https://doctorados.ugr.es/tic/">UGR Ph.D Program</a></li>
+                    <li><a href="https://www.ugr.es/">University of Granada</a></li>
+                </ul>
+            </nav>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Doctoral Thesis</h2>
+                </header>
+                <div class="mini-posts">
+                    <article>
+                        <img alt="University of Granada" src="{{ url_for('static', filename='images/ugrlogo-small.png') }}" style=width:75px;height:75px;border:0;display:flex;justify-content:center"><br>
+                        <p>Development of my dissertation to pursue the PhD degree in Information and Communication Technologies at the University of Granada, Spain.</p>
+                    </article>
+                </div>
+                <ul class="actions">
+                    <li><a href="#" class="button">More</a></li>
+                </ul>
+            </section>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Get in touch</h2>
+                </header>
+                <p>You can contact us at Department of Computer Science and AI of the University of Granada:</p>
+                <ul class="contact">
+                    <li class="fa-envelope-o"><a href="mailto:cristyanmanta@correo.ugr.es">cristyanmanta@correo.ugr.es</a></li>
+                    <li class="fa-envelope-o"><a href="mailto:jmfluna@decsai.ugr.es">jmfluna@decsai.ugr.es</a></li>
+                    <li class="fa-home">Calle Periodista Daniel Saucedo Aranda, s/n, 18014 Granada, Spain</li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">2022 &copy; <br /> Cristyan Manta-Caro & <br /> Juan M. Fernández-Luna.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

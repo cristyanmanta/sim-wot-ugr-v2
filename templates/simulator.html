@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	SIM.WoT Event-Driven Simulator for the Web of Things
+	-- Dashboard UI Options
+-->
+<html xmlns:justify-content="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SIM.WoT - Event-Driven WoT Simulation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Web of Things Event-Driven Simulation" />
+    <meta name="keywords" content="Information Retrieval, Search Engine, Web of Things, Internet of Things" />
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <!-- Section for Search of Things -->
+                <section class="alt" id="search">
+                    <p>Event-Driven Simulator for the <br /> <\WoT> Web of Things</p>
+                    <!-- <form method="post" action="/results">
+                        <input type="text" name="query" id="query" placeholder="Search for Things?" />
+                    </form> -->
+                </section>
+                <ul class="icons">
+                    <li><a class="icon fa-github fa-2x" href="https://github.com/cristyanmanta/sim-wot-ugr"><span class="label">GitHub Project Repository</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Banner w/ id="banner" nor Content-->
+            <section>
+
+                <header class="major">
+                    <h2>Simulator - SIM.WoT </h2>
+                </header>
+
+            </section>
+
+            <section>
+
+                <div class="posts">
+                    <article>
+                        <a class="image" href="#"><img alt="" src="images/pic01.jpg"></a>
+                        <h3>SIM.WoT Statistics</h3>
+                        <div id="clock">8:10:45</div>
+                        <div id="stats_now">
+                            Simulation Time: 000 Cycles <br>
+                            Current number of Entities: <br>
+                            Current number of vThings:  <br>
+                            Current number of vSensors: <br>
+                        </div>
+                        <div id="collection_now">
+                            Collection Size (Initial): xxx MB <br>
+                            Collection Size (Final)  : xxx MB <br>
+                            Growth Rate (KB/s)       : xxx KB/s <br>
+                            Changes Rate (CH/s)      : xxx CH/s <br>
+                        </div>
+                        <p><br>
+                        </p>
+                        <ul class="actions">
+                            <li><a class="button" href="/about">More</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <a class="image" href="#"><img alt="" src="images/pic01.jpg"></a>
+                        <h3>SIM.WoT Major Events</h3>
+                        <p>Stopping event created at completing: {{ simulate['time_stop'] }} cycles.<br>
+                            Stopping event created at completing: {{ simulate['entities_stop'] }} entities.</p>
+                        <p></p>
+                        <ul class="actions">
+                            <li><a class="button" href="/about">More</a></li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form name="form-sidebar" method="post" action="/results">
+                    <input type="text" name="query_sidebar" id="query_sidebar" placeholder="Search for Things?" />
+                </form>
+            </section>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Navigation Bar</h2>
+                </header>
+                <ul>
+                    <li>
+                        <span class="opener">IR.WoT</span>
+                        <ul>
+                            <li><a href="https://ir-wot-ugr.appspot.com/">Search</a></li>
+                            <li><a href="https://ir-wot-ugr.appspot.com/dashboard">Instructions</a></li>
+                            <li><a href="/architecture">Architecture</a></li>
+                            <li><a href="https://ir-wot-ugr.appspot.com/settings">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">SiM.WoT</span>
+                        <ul>
+                            <li><a href="/simulator">Simulator</a></li>
+                            <li><a href="https://sim-wot-ugr.appspot.com/">Index</a></li>
+                            <li><a href="/settings">Settings</a></li>
+                            <li><a href="/about">About</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://ir-wot-ugr.ue.r.appspot.com/research">Research</a></li>
+                    <li><a href="https://doctorados.ugr.es/tic/">UGR Ph.D Program</a></li>
+                    <li><a href="https://www.ugr.es/">University of Granada</a></li>
+                </ul>
+            </nav>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Doctoral Thesis</h2>
+                </header>
+                <div class="mini-posts">
+                    <article>
+                        <img alt="University of Granada" src="{{ url_for('static', filename='images/ugrlogo-small.png') }}" style=width:75px;height:75px;border:0;display:flex;justify-content:center"><br>
+                        <p>Development of my dissertation to pursue the PhD degree in Information and Communication Technologies at the University of Granada, Spain.</p>
+                    </article>
+                </div>
+                <ul class="actions">
+                    <li><a href="#" class="button">More</a></li>
+                </ul>
+            </section>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Get in touch</h2>
+                </header>
+                <p>You can contact us at Department of Computer Science and AI of the University of Granada:</p>
+                <ul class="contact">
+                    <li class="fa-envelope-o"><a href="mailto:cristyanmanta@correo.ugr.es">cristyanmanta@correo.ugr.es</a></li>
+                    <li class="fa-envelope-o"><a href="mailto:jmfluna@decsai.ugr.es">jmfluna@decsai.ugr.es</a></li>
+                    <li class="fa-home">Calle Periodista Daniel Saucedo Aranda, s/n, 18014 Granada, Spain</li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">2022 &copy; <br /> Cristyan Manta-Caro & <br /> Juan M. Fernández-Luna.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/clock2.js') }}"></script>
+
+</body>
+</html>
